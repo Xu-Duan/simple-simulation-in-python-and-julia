@@ -150,7 +150,7 @@ def main():
         d_v_tent__d_y = central_difference_y(v_tent)
         #laplace__u_tent = laplace(u_tent)
 
-        # Compute the pressure correction by solving the pressure equation
+        # Compute the pressure correction by solving the pressure-poisson equation
         rhs = (
             DENSITY / TIME_STEP_LENGTH * (
                 d_u_tent__d_x + d_v_tent__d_y
